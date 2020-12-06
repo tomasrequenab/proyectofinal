@@ -129,7 +129,7 @@ public class LocationActivity extends AppCompatActivity {
             String city = addresses.get(0).getLocality();
             String knonName = addresses.get(0).getFeatureName();
 
-            return country + state + city + knonName;
+            return country + ", " + state + ", " + city + ", " + knonName;
         } catch (IOException e) {
             e.printStackTrace();
             return null;
