@@ -50,6 +50,9 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    /**
+     * Check Biometric Authentication is available
+     */
     private void checkBiometricAuthentication() {
         switch (biometricManager.canAuthenticate()) {
             case BiometricManager.BIOMETRIC_SUCCESS:
@@ -68,31 +71,48 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Check if user is registered
+     * @return User is registered
+     */
     private boolean isUserRegistered() {
         return getApplicationContext()
                 .getSharedPreferences("", Context.MODE_PRIVATE)
                 .getString(USER_ID_KEY, null) != null;
     }
 
+    /**
+     * Authenticate using finger print
+     */
     private void authenticateFingerPrint() {
         BiometricPrompt.PromptInfo promptInfo = new BiometricPrompt.PromptInfo.Builder()
                 .setTitle("Registro Biométrico UBICATEX")
                 .setSubtitle("Inicia sesión utilizando tu huella digital")
+                .setNegativeButtonText("Cancelar")
                 .setDeviceCredentialAllowed(false)
                 .build();
 
         biometricPrompt.authenticate(promptInfo);
     }
 
+    /**
+     * Show authentication method unavailable error
+     */
     private void showUnavailableAuthenticationMethod() {
         Log.i("AUTH", "Authentication unavailable");
     }
 
+    /**
+     * Load register view
+     */
     private void loadRegister() {
         Intent registerIntent = new Intent(this, RegisterActivity.class);
         startActivity(registerIntent);
     }
 
+    /**
+     * Load location view
+     */
     private void loadLocation() {
         Intent locationIntent = new Intent(this, LocationActivity.class);
         startActivity(locationIntent);
