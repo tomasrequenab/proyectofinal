@@ -71,7 +71,7 @@ public class RegisterActivity extends AppCompatActivity {
      */
     private void authenticateFingerPrint() {
         BiometricPrompt.PromptInfo promptInfo = new BiometricPrompt.PromptInfo.Builder()
-                .setTitle("Registro Biométrico UBICATEX")
+                .setTitle("Registro Biométrico ubicatex")
                 .setSubtitle("Registrate utilizando tu huella digital")
                 .setNegativeButtonText("Cancelar")
                 .setDeviceCredentialAllowed(false)
