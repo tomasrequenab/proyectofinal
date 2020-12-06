@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Proyecto Final</string>
+    <string name="get_location">Get Location</string>
+    <string name="latitud">Latitud</string>
+    <string name="longitud">Longitud</string>
+    <string name="locacion">Locacion</string>
 </resources>
