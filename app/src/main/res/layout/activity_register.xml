@@ -10,11 +10,15 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="106dp"
+        android:layout_marginTop="285dp"
+        android:layout_marginEnd="124dp"
         android:fontFamily="sans-serif-light"
         android:text="¿Quieres registrarte?"
-        android:textSize="16sp"
-        tools:layout_editor_absoluteX="133dp"
-        tools:layout_editor_absoluteY="283dp" />
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView4"
@@ -23,7 +27,8 @@
         android:layout_marginTop="15dp"
         android:fontFamily="sans-serif-medium"
         android:text="¡No encontramos tu huella!"
-        android:textSize="18sp"
+        android:textColor="#FF9800"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,10 +38,17 @@
 
     <Button
         android:id="@+id/register_btn"
-        android:layout_width="159dp"
-        android:layout_height="58dp"
+        android:layout_width="172dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="119dp"
+        android:layout_marginTop="369dp"
+        android:layout_marginEnd="120dp"
+        android:background="#FF9800"
         android:text="Registrar huella"
-        tools:layout_editor_absoluteX="128dp"
-        tools:layout_editor_absoluteY="334dp" />
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
